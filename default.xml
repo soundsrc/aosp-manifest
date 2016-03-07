@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".." />
+           fetch="https://android.googlesource.com" />
   <remote  name="soundsrc"
            fetch="https://github.com/soundsrc" />
   <default revision="refs/tags/android-6.0.0_r26"
@@ -53,8 +53,8 @@
   <project path="device/huawei/angler-kernel" name="device/huawei/angler-kernel" groups="device,angler,broadcom_pdk" />
   <project path="device/lge/hammerhead" name="device/lge/hammerhead" groups="device,hammerhead,broadcom_pdk,generic_fs" />
   <project path="device/lge/hammerhead-kernel" name="device/lge/hammerhead-kernel" groups="device,hammerhead,broadcom_pdk,generic_fs" clone-depth="1" />
-  <project path="device/lge/mako" name="device_lge_mako" groups="device,mako,broadcom_pdk,generic_fs" remote="soundsrc" />
-  <project path="device/lge/mako-kernel" name="device_lge_mako-kernel" groups="device,mako,broadcom_pdk,generic_fs" remote="soundsrc" clone-depth="1" />
+  <project path="device/lge/mako" name="device_lge_mako" groups="device,mako,broadcom_pdk,generic_fs" remote="soundsrc" revision="master" />
+  <project path="device/lge/mako-kernel" name="device_lge_mako-kernel" groups="device,mako,broadcom_pdk,generic_fs" remote="soundsrc" clone-depth="1" revision="master" />
   <project path="device/moto/shamu" name="device/moto/shamu" groups="device,shamu,broadcom_pdk" />
   <project path="device/moto/shamu-kernel" name="device/moto/shamu-kernel" groups="device,shamu,broadcom_pdk" clone-depth="1" />
   <project path="device/sample" name="device/sample" groups="pdk" />
