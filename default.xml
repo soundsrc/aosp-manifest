@@ -5,11 +5,13 @@
            fetch="https://android.googlesource.com" />
   <remote  name="soundsrc"
            fetch="https://github.com/soundsrc" />
-  <default revision="refs/tags/android-6.0.1_r17"
+  <remote  name="zaclimon"
+           fetch="https://github.com/zaclimon" />
+  <default revision="refs/tags/android-7.0.0_r6"
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="platform_build" groups="pdk" remote="soundsrc" >
+  <project path="build" name="platform_build" groups="pdk">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
@@ -53,8 +55,8 @@
   <project path="device/huawei/angler-kernel" name="device/huawei/angler-kernel" groups="device,angler,broadcom_pdk" />
   <project path="device/lge/hammerhead" name="device/lge/hammerhead" groups="device,hammerhead,broadcom_pdk,generic_fs" />
   <project path="device/lge/hammerhead-kernel" name="device/lge/hammerhead-kernel" groups="device,hammerhead,broadcom_pdk,generic_fs" clone-depth="1" />
-  <project path="device/lge/mako" name="device_lge_mako" groups="device,mako,broadcom_pdk,generic_fs" remote="soundsrc" revision="marshmako" />
-  <project path="device/lge/mako-kernel" name="device_lge_mako-kernel" groups="device,mako,broadcom_pdk,generic_fs" remote="soundsrc" clone-depth="1" revision="development" />
+  <project path="device/lge/mako" name="android_device_lge_mako" groups="device,mako,broadcom_pdk,generic_fs" remote="zaclimon" revision="nougat-release" />
+  <project path="device/lge/mako-kernel" name="android_kernel_google_msm" groups="device,mako,broadcom_pdk,generic_fs" remote="zaclimon" clone-depth="1" revision="mako-nougat" />
   <project path="device/moto/shamu" name="device/moto/shamu" groups="device,shamu,broadcom_pdk" />
   <project path="device/moto/shamu-kernel" name="device/moto/shamu-kernel" groups="device,shamu,broadcom_pdk" clone-depth="1" />
   <project path="device/sample" name="device/sample" groups="pdk" />
@@ -71,7 +73,7 @@
   <project path="external/apache-xml" name="platform/external/apache-xml" groups="pdk" />
   <project path="external/bison" name="platform/external/bison" groups="pdk" />
   <project path="external/blktrace" name="platform/external/blktrace" groups="pdk-cw-fs,pdk-fs" />
-  <project path="external/boringssl" name="platform_external_boringssl" groups="pdk" remote="soundsrc" revision="mm-6.0.1" />
+  <project path="external/boringssl" name="platform_external_boringssl" groups="pdk" remote="soundsrc" revision="mm-7.0.0_r6" />
   <project path="external/bouncycastle" name="platform/external/bouncycastle" groups="pdk" />
   <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
   <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" />
@@ -269,7 +271,7 @@
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
-  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="soundsrc" revision="mm-6.0.1" />
+  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="soundsrc" revision="mm-7.0.0_r6" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
